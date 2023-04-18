@@ -24,7 +24,7 @@ The codemod accepts the following options:
 
 |        Option         |  Value  |             Default             |                                                                     Details                                                                      |
 | --------------------- | ------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `--macros`      | string | `''`                          | Filter which computed macros should be transformed.                                                                              |
+| `--macros`      | string | `alias,and,equal,gt,gte,lt,lte,or,readOnly`                          | Filter which computed macros should be transformed. By default, all supported ones are transformed.                                                                              |
 | `--add-computed-decorator`      | boolean | `false`                          | Add the `@computed` decorator to the native getter for full compatibility. Skipping this works if all dependencies are auto tracked.<sup>1</sup>                                                                             |
 
 <small>1. Computed property macros are computed properties, and thus only recompute once the dependency keys are updated. If you want to keep this behaviour, the `@cached` decorator should be added. This should however be used with caution, and is usually something you don't want. ([see docs](https://api.emberjs.com/ember/release/functions/@glimmer%2Ftracking/cached)) Alternatively, you can opt to readd the `@computed` decorator to keep compatible behaviour.</small>

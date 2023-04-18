@@ -2,7 +2,7 @@ const { getParser } = require('codemod-cli').jscodeshift;
 const { getOptions } = require('codemod-cli');
 
 const DEFAULT_OPTIONS = {
-  macros: ['alias', 'and', 'equal', 'gt', 'gte', 'lt', 'lte', 'or', 'readOnly'],
+  macros: 'alias,and,equal,gt,gte,lt,lte,or,readOnly',
   addComputedDecorator: false,
 };
 
@@ -72,6 +72,7 @@ module.exports = function transformer(file, api) {
   const root = j(file.source);
   const configOptions = Object.assign({}, DEFAULT_OPTIONS, getOptions());
   let shouldAddComputedImport = false;
+  const macrosToTransform = configOptions.macros.split(',');
   const isClassSyntax = root.find(j.ClassProperty, {
     decorators: [{}],
   }).length;
@@ -87,7 +88,7 @@ module.exports = function transformer(file, api) {
       }
 
       let macro = decorator.expression.callee.name;
-      if (!configOptions.macros.includes(macro)) {
+      if (!macrosToTransform.includes(macro)) {
         return;
       }
       let propertyName = path.node.key.name;
@@ -229,7 +230,7 @@ module.exports = function transformer(file, api) {
 
   // Remove computed macro imports
   if (isClassSyntax) {
-    configOptions.macros.forEach((macro) => removeMacroImport(j, root, macro));
+    macrosToTransform.forEach((macro) => removeMacroImport(j, root, macro));
   }
 
   if (shouldAddComputedImport) {
