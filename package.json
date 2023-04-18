@@ -2,7 +2,7 @@
   "name": "ember-computed-property-macro-codemod",
   "version": "0.1.0",
   "description": "A codemod for converting Ember computed property macros (a.k.a. shorthands) to native getters in class syntax",
-  "repository": "https://github.com/OTAInsight/ember-computed-property-macro-codemod",
+  "repository": "https://github.com/OTA-Insight/ember-computed-property-macro-codemod",
   "license": "MIT",
   "author": {
     "name": "Ignace Maes"
