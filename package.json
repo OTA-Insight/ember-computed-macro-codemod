@@ -8,7 +8,7 @@
     "name": "Ignace Maes"
   },
   "scripts": {
-    "lint": "eslint --cache .",
+    "lint": "eslint --cache transforms",
     "test": "codemod-cli test",
     "test:coverage": "codemod-cli test --coverage",
     "update-docs": "codemod-cli update-docs",
