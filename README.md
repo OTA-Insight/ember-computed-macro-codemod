@@ -5,7 +5,7 @@ A codemod for converting Ember computed property macros (a.k.a. shorthands) to n
 
 ## Updating your codebase
 
-The recommended Ember ESLint config [discourages computed property macros](https://github.com/ember-cli/eslint-plugin-ember/blob/master/docs/rules/require-computed-macros.md#configuration) for class based syntax. Instead, it recommends to use auto tracking and native getters. This codemod to convert all computed property macros to native getters.
+The recommended Ember ESLint config [discourages computed property macros](https://github.com/ember-cli/eslint-plugin-ember/blob/master/docs/rules/require-computed-macros.md#configuration) for class based syntax. Instead, it recommends to use auto tracking and native getters. This codemod converts a subset (see support matrix) of all computed property macros to native getters.
 
 See also:
 - This codemod only runs on JavaScript Class syntax. If you haven't already, use the [ember-native-class](https://github.com/ember-codemods/ember-native-class-codemod) codemod to transform object syntax to class syntax.
