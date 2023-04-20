@@ -3,6 +3,6 @@
 
 require('codemod-cli').runTransform(
   __dirname,
-  'computed-property-macro' /* transform name */,
+  'computed-macro' /* transform name */,
   process.argv.slice(2) /* paths or globs */
 );

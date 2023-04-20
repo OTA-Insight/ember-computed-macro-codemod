@@ -1,4 +1,4 @@
-# ember-computed-property-macro-codemod
+# ember-computed-macro-codemod
 
 
 A codemod for converting Ember computed property macros (a.k.a. shorthands) to native getters in class syntax.
@@ -14,7 +14,7 @@ See also:
 ## Usage
 
 ```
-npx ember-computed-property-macro-codemod path/of/files/ or/some**/*glob.js
+npx ember-computed-macro-codemod path/of/files/ or/some**/*glob.js
 ```
 
 > **Warning**
@@ -51,7 +51,7 @@ class Foo {
 }
 ```
 
-For a complete list of example transforms, see the [computed-property-macro](transforms/computed-property-macro/README.md) transform description.
+For a complete list of example transforms, see the [computed-macro](transforms/computed-macro/README.md) transform description.
 
 ## Support matrix
 
@@ -100,7 +100,7 @@ For a complete list of example transforms, see the [computed-property-macro](tra
 ## Transforms
 
 <!--TRANSFORMS_START-->
-* [computed-property-macro](transforms/computed-property-macro/README.md)
+* [computed-macro](transforms/computed-macro/README.md)
 <!--TRANSFORMS_END-->
 
 ## Contributing
