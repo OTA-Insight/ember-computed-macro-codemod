@@ -55,7 +55,7 @@ import { set, computed } from '@ember/object';
 class Foo {
   @computed('foo.bar')
   get bar() {
-    return this.foo.bar;
+    return this.foo?.bar;
   }
 
   etc() {
@@ -84,7 +84,7 @@ import { computed } from '@ember/object';
 class Foo {
   @computed('foo.bar')
   get bar() {
-    return this.foo.bar;
+    return this.foo?.bar;
   }
 
   @computed('foo', 'bar', 'etc')
@@ -109,7 +109,7 @@ class Foo {
 ```js
 class Foo {
   get fooBar() {
-    return this.foo.bar;
+    return this.foo?.bar;
   }
 
   set fooBar(value) {
@@ -157,7 +157,7 @@ import { uniqBy } from '@ember/object/computed';
 
 class Foo {
   get bar() {
-    return this.foo.bar;
+    return this.foo?.bar;
   }
 
   @uniqBy('fruits', 'id') uniqueFruits;
@@ -179,7 +179,7 @@ class Foo {
 ```js
 class Foo {
   get isOne() {
-    return this.foo.bar === 1;
+    return this.foo?.bar === 1;
   }
 }
 ```
@@ -199,7 +199,7 @@ class Foo {
 ```js
 class Foo {
   get bar() {
-    return this.foo.bar > 9000;
+    return this.foo?.bar > 9000;
   }
 }
 ```
@@ -219,7 +219,7 @@ class Foo {
 ```js
 class Foo {
   get bar() {
-    return this.foo.bar >= 9000;
+    return this.foo?.bar >= 9000;
   }
 }
 ```
@@ -267,7 +267,7 @@ class Foo {
 ```js
 class Foo {
   get bar() {
-    return this.foo.bar < 9000;
+    return this.foo?.bar < 9000;
   }
 }
 ```
@@ -287,7 +287,7 @@ class Foo {
 ```js
 class Foo {
   get bar() {
-    return this.foo.bar <= 9000;
+    return this.foo?.bar <= 9000;
   }
 }
 ```
@@ -327,7 +327,7 @@ class Foo {
 ```js
 class Foo {
   get bar() {
-    return this.foo.bar;
+    return this.foo?.bar;
   }
 }
 ```

@@ -46,7 +46,7 @@ The codemod will rewrite this to use native getters:
 ```js
 class Foo {
   get bar() {
-    return this.foo.bar;
+    return this.foo?.bar;
   }
 }
 ```
