@@ -1,5 +1,5 @@
 class Foo {
   get bar() {
-    return this.foo.bar <= 9000;
+    return this.foo?.bar <= 9000;
   }
 }

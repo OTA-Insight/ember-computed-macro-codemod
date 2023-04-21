@@ -1,5 +1,5 @@
 class Foo {
   get bar() {
-    return this.foo.bar;
+    return this.foo?.bar;
   }
 }

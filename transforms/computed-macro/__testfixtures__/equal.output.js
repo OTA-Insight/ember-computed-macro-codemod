@@ -1,5 +1,5 @@
 class Foo {
   get isOne() {
-    return this.foo.bar === 1;
+    return this.foo?.bar === 1;
   }
 }
