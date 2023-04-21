@@ -35,10 +35,11 @@ function addComputedImport(j, root) {
   if (emberObjectImports.length) {
     // If there is an existing import, add it there
     emberObjectImports
-      .filter((emberObjectImport) =>
-        emberObjectImport.node.specifiers.some(
-          (specifier) => specifier.imported.name !== 'computed'
-        )
+      .filter(
+        (emberObjectImport) =>
+          !emberObjectImport.node.specifiers.some(
+            (specifier) => specifier.imported.name === 'computed'
+          )
       )
       .forEach((emberObjectImport) =>
         // Replace the existing node with a new one
