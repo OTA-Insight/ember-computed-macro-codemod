@@ -125,7 +125,7 @@ class Foo {
 import { and } from '@ember/object/computed';
 
 class Foo {
-  @and('foo', 'bar', 'etc') fooBar;
+  @and('foo', 'bar', 'etc', 'deep.property') fooBar;
 }
 ```
 
@@ -133,7 +133,7 @@ class Foo {
 ```js
 class Foo {
   get fooBar() {
-    return this.foo && this.bar && this.etc;
+    return this.foo && this.bar && this.etc && this.deep?.property;
   }
 }
 ```
@@ -319,7 +319,7 @@ class Foo {
 import { readOnly } from '@ember/object/computed';
 
 class Foo {
-  @readOnly('foo.bar') bar;
+  @readOnly('foo.bar.thing') bar;
 }
 ```
 
@@ -327,7 +327,7 @@ class Foo {
 ```js
 class Foo {
   get bar() {
-    return this.foo?.bar;
+    return this.foo?.bar?.thing;
   }
 }
 ```
