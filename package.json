@@ -36,10 +36,13 @@
     "prettier": "^2.8.7"
   },
   "engines": {
-    "node": "10.* || 12.* || >= 14"
+    "node": "16.* || 18.* || >= 20"
   },
   "jest": {
     "testEnvironment": "node"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "volta": {
+    "node": "18.16.0"
+  }
 }
