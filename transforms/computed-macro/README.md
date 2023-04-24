@@ -4,7 +4,7 @@
 ## Usage
 
 ```
-npx ember-computed-macro-codemod path/of/files/ or/some**/*glob.js
+npx @ota-insight/ember-computed-macro-codemod path/of/files/ or/some**/*glob.js
 ```
 
 ## Local Usage
