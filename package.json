@@ -23,6 +23,7 @@
     "computed-macro"
   ],
   "dependencies": {
+    "@changesets/cli": "^2.26.1",
     "codemod-cli": "^3.2.0"
   },
   "devDependencies": {
