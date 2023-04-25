@@ -16,6 +16,11 @@
     "release": "changeset publish"
   },
   "bin": "./bin/cli.js",
+  "files": [
+    "/bin",
+    "/lib",
+    "/transforms/computed-macro/index.js"
+  ],
   "keywords": [
     "codemod-cli",
     "codemods",
